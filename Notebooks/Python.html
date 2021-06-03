@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+                Python Notebooks From Beginner to Expert level
+        </title>
+    </head>
+    <body>
+        <img src="../Main/img/Logo.jpg" alt="LogoException" class="center">
+        <style>
+            body {
+                background-image: url("../Main/img/blue_block_background.jpg"),url("../Main/img/blue_block_background.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 27%;
+            }
+            .center{
+                display :block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80px;
+                height: 80px;
+            }
+            h1 {text-align: center;}
+            .fa {
+                padding: 20px;
+                font-size: 24px;
+                width: 24px;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 65%;
+            }
+            /* Facebook */
+            .fa-facebook {
+            background: #3B5998;
+            color: white;
+            
+            }
+            /* Twitter */
+            .fa-twitter {
+                background: #55ACEE;
+                color: white;
+                
+            }
+            /*Github*/
+            .fa-github{
+                background: #000000;
+                color: white;
+               
+            }
+            /*Email*/
+            .fa-google{
+                background: #FF0000;
+                color: rgb(255, 255, 255); 
+                
+            }
+            .fa-instagram{
+                background: #000000;
+                color: white;   
+                
+            }
+            .tab{
+                display: inline-block;
+                margin-left: 40px;
+            }
+            .tab1{
+                display: inline-block;
+                margin-left: 80px;   
+            }
+            .tab2{
+                display: inline-block;
+                margin-left: 120px;   
+            }
+
+        </style>
+            <h1> Hercules</h1>
+            
+            <hr>
+            <!-- Reference Link Pages-->
+            <a href="../Main/index.html">Home</a> &emsp;
+            <a href="../Notebooks/Python.html">Python</a> &emsp;
+            <a href="../Notebooks/C++.html">C/C++</a> &emsp;
+            <a href="../Notebooks/Java.html">Java</a> &emsp;
+            <a href="../Myself/AboutUs.html">About Us</a>
+            <hr>
+            <h1> Python</h1>
+            <!--TOPIC-->
+            <h2>Area of Circle</h2>
+            <p>
+                Program to find the area of a circle.
+                That program takes in a radius of a circle as a input parameter and output the Area of the circle.
+            </p>
+            <code>
+                <br>
+                <span class="tab"></span> def get_area(r): 
+                <br>
+                <span class="tab1"></span>  return pi * pow (r,2) 
+                <br>
+                <span class="tab"></span> print get_area(12)
+                <br>
+            </code>
+            <!--TOPIC-->
+            <h2>Square Root </h2>
+            <p>
+                Program to find the Square Root of the function.In this program Input parameters are guess and the number.
+            </p>
+            <code>
+                <span class="tab"></span> def sqrt(x,guess=0.0):
+                    <br>
+                        <span class="tab1"></span> if x and guess < 0:
+                    <br>
+                            <span class="tab2"></span> print None
+                    <br>
+                        <span class="tab1"></span> if good_enough(guess,x):
+                    <br>
+                            <span class="tab2"></span>    return guess
+                    <br>
+                        <span class="tab1"></span> else:
+                    <br>
+                            <span class="tab2"></span>  new_guess=improve_guess(guess,x)
+                    <br>
+                            <span class="tab2"></span> return sqrt(x,new_guess)
+                    <br>
+                    <br>
+                    <br>
+
+                <span class="tab"></span> def good_enough(guess,x):
+                    <br>
+                        <span class="tab1"></span> if abs(guess*guess-x) < 0.00001:
+                    <br>
+                            <span class="tab2"></span>     return True
+                    <br>
+                        <span class="tab1"></span> else:
+                    <br>
+                            <span class="tab2"></span>     return False
+                    <br>
+                    <br>
+                <span class="tab"></span> def average(x,y):
+                    <br>
+                        <span class="tab1"></span> avg=(x+y)/2.0
+                    <br>
+                        <span class="tab1"></span>  return avg
+                    <br>
+                    <br>
+                    <!--/*End function*/-->
+                <span class="tab"></span> def improve_guess(guess,x):
+                    <br>
+                            <span class="tab2"></span>    x=x*1.0
+                    <br>
+                        <span class="tab1"></span>    if guess < 1:
+                    <br>
+                            <span class="tab2"></span>      return guess+5.00000
+                    <br>
+                        <span class="tab1"></span>    else:
+                    <br>
+                    <span class="tab2"></span>        new_guess=average(guess,x/guess)
+                    <br>
+                    <span class="tab2"></span>        return new_guess
+                    <br>
+            </code>
+            <!--TOPIC-->
+            <h2>NUCES SGPA</h2>
+            <p>
+                Program to find the sgpa of the student.In this program input parameter are grades of the student and output will be sgpa of the student.
+            </p>
+            <code>
+                <br>
+                <span class="tab"></span>def calculate_sgpa(g1,g2,g3):
+                <br>
+                    <span class="tab1"></span>subjects=0.0
+                <br>
+                    <span class="tab1"></span>points=0.0
+                <br>
+                    <span class="tab1"></span>if not g1 == "nothing":
+                <br>
+                        <span class="tab2"></span>gpa1=score(g1)
+                <br>
+                        <span class="tab2"></span>subjects=subjects+1
+                <br>
+                        <span class="tab2"></span>points=points+gpa1
+                <br>
+                    <span class="tab1"></span>if not g2 == "nothing":
+                <br>
+                        <span class="tab2"></span>gpa2=score(g2)
+                <br>
+                        <span class="tab2"></span>subjects=subjects+1
+                <br>
+                        <span class="tab2"></span>points=points+gpa2
+                <br>
+                    <span class="tab1"></span>if not g3== "nothing":
+                <br>
+                        <span class="tab2"></span>gpa3=score(g3)
+                <br>
+                        <span class="tab2"></span>subjects=subjects+1
+                <br>
+                        <span class="tab2"></span>points=points+gpa3
+                <br>
+                    <span class="tab1"></span>if subjects==0:
+                <br>
+                        <span class="tab2"></span>return 0
+                <br>
+                    <span class="tab1"></span>else:
+                <br>
+                        <span class="tab2"></span>final_sgpa=(points/subjects)
+                <br>
+                        <span class="tab1"></span>return final_sgpa
+                <br>
+                <br>
+            <!--/*Function End*/-->
+            <span class="tab"></span>    def score(n):
+                <br>
+                    <span class="tab1"></span>if n=="A+":
+                <br>
+                        <span class="tab2"></span>return 4.0
+                <br>
+                    <span class="tab1"></span>elif n=="A":
+                <br>
+                        <span class="tab2"></span>    return 4.0
+                <br>
+                    <span class="tab1"></span>elif n=="A-":
+                <br>
+                        <span class="tab2"></span>return 3.67
+                <br>
+                    <span class="tab1"></span>elif n=="B+":
+                <br>
+                        <span class="tab2"></span>return 3.33
+                <br>        
+                    <span class="tab1"></span>elif n=="B":
+                <br>
+                        <span class="tab2"></span>return 3.0
+                <br>
+                    <span class="tab1"></span>elif n=="B-":
+                <br>
+                        <span class="tab2"></span>return 2.67
+                <br>
+                    <span class="tab1"></span>elif n=="C+":
+                <br>
+                        <span class="tab2"></span>return 2.67return 2.33
+                <br>
+                    <span class="tab1"></span>elif n=="C":
+                <br>
+                        <span class="tab2"></span>return 2.67return 2.0
+                <br>
+                    <span class="tab1"></span>elif n=="C-":
+                <br>
+                        <span class="tab2"></span>return 2.67return 1.67
+                <br>
+                    <span class="tab1"></span>elif n=="D+":
+                <br>
+                        <span class="tab2"></span>return 2.67    return 1.33
+                <br>
+                    <span class="tab1"></span>elif n=="D":
+                <br>
+                        <span class="tab2"></span>return 2.67    return 1.0
+                <br>
+                    <span class="tab1"></span>elif n=="F":
+                <br>
+                        <span class="tab2"></span>return 2.67    return 0.0
+                <br>
+                <br>
+            <span class="tab"></span>return 2.67print calculate_sgpa('A', 'B', 'nothing')
+            </code>
+            <!--TOPIC-->
+    </body>
+    <footer>
+        <hr>
+        FOLLOW ME
+        <br>
+        <br>
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Add font awesome icons -->
+        <a href="https://www.google.com/" class="fa fa-google"></a>
+        <a href="https://github.com/HerculesVirus" class="fa fa-github"></a>
+        <a href="https://www.instagram.com/arslan_khan72/"  class=" fa fa-instagram"></a>       
+        <a href="https://www.facebook.com/muhammadarslan.ahmadkhan" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/HercluesVirus" class="fa fa-twitter"></a>
+    </footer>
+</html>
